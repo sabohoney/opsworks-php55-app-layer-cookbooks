@@ -24,7 +24,7 @@ case node[:platform]
     
     
     # remove any existing php/mysql
-    execute "yum remove -y php* mysql*"
+    execute "yum remove -y php*"
     
     # get the metadata
     execute "yum -q makecache"
