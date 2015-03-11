@@ -1,8 +1,8 @@
 case node[:platform]
     
     when "amazon"
-    node.set['mysql']['server']['packages'] = %w{mysql55w-server}
-    node.set['mysql']['client']['packages'] = %w{mysql55w}
+    #node.set['mysql']['server']['packages'] = %w{mysql55w-server}
+    #node.set['mysql']['client']['packages'] = %w{mysql55w}
 
     include_recipe "build-essential"
     include_recipe "apache2::default"
@@ -48,8 +48,8 @@ case node[:platform]
   end
   
   node.set['php']['packages'] = ['php55w', 'php55w-devel', 'php55w-cli', 'php55w-snmp', 'php55w-soap', 'php55w-xml', 'php55w-xmlrpc', 'php55w-process', 'php55w-mysqlnd', 'php55w-pecl-memcache', 'php55w-opcache', 'php55w-pdo', 'php55w-imap', 'php55w-mbstring', 'php55w-intl']
-  node.set['mysql']['server']['packages'] = %w{mysql55w-server}
-  node.set['mysql']['client']['packages'] = %w{mysql55w}
+  #node.set['mysql']['server']['packages'] = %w{mysql55w-server}
+  #node.set['mysql']['client']['packages'] = %w{mysql55w}
 
   include_recipe "build-essential"
   include_recipe "apache2::default"
